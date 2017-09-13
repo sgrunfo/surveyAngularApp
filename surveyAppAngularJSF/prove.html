@@ -1,0 +1,30 @@
+<div id=\"s_question_a_'+n_question+'\" class="question question_open">
+
+  <div class=\"input-field col s12\">
+    <input id=\"s_question_title_'+n_question+'\" type=\"text\" class=\"validate\" ng-model=\"newSurvey.questions.s_question_'+n_question+'.title\">
+    <label for=\"s_question_title_'+n_question+'\">Question Title</label>
+  </div><div class=\"input-field col s12\">
+    <input id=\"s_question_'+n_question+'\" type=\"text\" class=\"validate\" ng-model=\"newSurvey.questions.s_question_'+n_question+'.data.domanda\">
+    <label for=\"s_question_'+n_question+'\">Testo Domanda</label>
+  </div>
+
+</div>
+
+
+<div id="s_question_o_'+n_question_o+'" class="question question_option">
+  <div class=\"input-field col s12\">
+    <input id=\"s_question_o_title_'+n_question_o+'\" type=\"text\" class=\"validate\" ng-model=\"newSurvey.questions.s_question_o_'+n_question_o+'.title\">
+    <label for=\"s_question_o_title_'+n_question_o+'\">Question Title</label>
+  </div>
+  <div class=\"input-field col s11\">
+    <input id=\"s_question_o_'+n_question_o+'\" type=\"text\" class=\"validate\" ng-model=\"newSurvey.questions.s_question_o_'+n_question_o+'.data.domanda\">
+    <label for=\"s_question_o_'+n_question_o+'\">Question</label>
+  </div>
+  <div class="col s1"><a class="btn-floating btn-medium waves-effect waves-light green" is-clickable="true" ng-click="addOption($event)">
+    <i class="material-icons">add</i>
+  </a>
+</div>
+</div>
+
+
+colori #0B4F96 E64D00 E68A00

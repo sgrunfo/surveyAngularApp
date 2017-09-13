@@ -1,0 +1,105 @@
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+#login{
+    margin: 0 auto;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    background-color: #efefef;
+}
+
+#logoLoginForm{
+  margin-top: 1em;
+}
+
+#allLoginForm{
+  text-align: center;
+}
+
+#allLoginForm #login{
+  text-align: left;
+}
+
+
+a{
+  color: #999;
+}
+
+#menu_principale .brand-logo{
+  padding: 5px;
+  left: 50px;
+}
+
+#menu_principale .brand-logo img.responsive-img{/*immagine troppo grande*/
+  max-width: 50%;
+}
+
+.surveyColor{
+  background-color: #009966 !important;
+}
+
+.surveyColor-text{
+  color: #009966 !important;
+}
+
+#modal1{
+  height: 250px;
+  top: 25% !important;
+}
+
+
+/*Sondaggi*/
+
+#sondaggi i.on{
+  background-color: #4caf50;
+}
+
+#sondaggi i.off{
+  background-color: #f44336;
+}
+
+
+/*new Survey*/
+
+#surveyDetails{
+  padding: 20px;
+  background-color: #0B4F96;
+  margin-bottom: 20px;
+}
+
+#surveyDetails input, #surveyDetails label, #questionSurvey input, #questionSurvey label{
+  color: white;
+}
+
+#surveyDetails span.caret{
+  color: white;
+}
+
+
+/*Summary Survey*/
+
+#summarySurvey .summary-button{
+  margin-right: -2.5em;
+}
+
+/*Summary Survey END*/
+
+.col.question{
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.col.question_open, .addQuestion{
+  background-color: #E68A00;
+}
+
+.col.question_option, .addQuestionOption{
+  background-color: #E64D00;
+}
+
+footer{
+  margin-top: 50px;
+}

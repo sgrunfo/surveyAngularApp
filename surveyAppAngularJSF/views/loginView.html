@@ -1,0 +1,18 @@
+<div id="allLoginForm" class="container" ng-controller="LoginCtrl">
+  <div id="logoLoginForm" class="row">
+    <img class="responsive-img" src="images/survey_app_logo.png">
+  </div>
+  <div class="row" id="login">
+    <form action="/" id="myLogin">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" ng-model="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" ng-model="password">
+        <label for="password">Password</label>
+      </div>
+      <button class="btn waves-effect waves-light surveyColor" type="button" name="action" ng-click="submit()">Login</button>
+    </form>
+  </div>
+</div>

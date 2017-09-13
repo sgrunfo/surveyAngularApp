@@ -1,0 +1,45 @@
+<div ng-include="'views/menu.html'"></div>
+
+<div id="head_title" class="row surveyColor">
+    <div id="title" class="title col s12">
+      <h3 class="white-text">Account</h3>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s3 m3"></div>
+    <div class="col s6 m6">
+      <div class="card green lighten-2" ng-controller="accountCtrl">
+        <div class="card-content white-text">
+          <span class="card-title">Your Profile</span>
+          <p>ID: <span class="spanCard">{{ id }}</span></p>
+          <p>Email: <span class="spanCard">{{ email }}</span></p>
+          <p>Role: <span class="spanCard">{{ role }}</span></p>
+        </div>
+        <div class="card-action">
+          <button data-target="modal1" class="btn modal-trigger">change Password</button>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" ng-model="password">
+              <label for="password">Insert old passord</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="newPassword" type="password" class="validate" ng-model="newPassword">
+              <label for="newPassword">insert new password</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" ng-click="changePass()">change Password <i class="material-icons">send</i></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col s3 m3"></div>
+</div>
+</div>

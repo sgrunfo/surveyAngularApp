@@ -1,0 +1,26 @@
+<div id="allRegisterForm" class="container" ng-controller="RegisterCtrl">
+  <div id="logoLoginForm" class="row">
+    <img class="responsive-img" src="images/survey_app_logo.png">
+  </div>
+  <div class="row" id="register">
+    <form action="/" id="myRegister">
+      <div class="input-field col s12">
+        <input id="name" type="text" class="validate" ng-model="name">
+        <label for="name">name</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="lastname" type="text" class="validate" ng-model="lastname">
+        <label for="lastname">lastname</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" ng-model="email">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" ng-model="password">
+        <label for="password">Password</label>
+      </div>
+      <button class="btn waves-effect waves-light surveyColor" type="button" name="action" ng-click="submit()">Sing in</button>
+    </form>
+  </div>
+</div>

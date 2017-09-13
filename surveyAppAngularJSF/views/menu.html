@@ -1,0 +1,14 @@
+<nav class="green lighten-2">
+  <div id="menu_principale" class="nav-wrapper">
+    <a href="#/" class="brand-logo"><img class="responsive-img" src="images/survey_app_logo.png"></a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a ng-href="#!/surveys">Surveys</a></li>
+      <li><a ng-href="#!/new-survey">New Survey</a></li>
+      <li><a ng-href="#!/users">Users</a></li>
+      <li><a ng-href="#!/account">Account</a></li>
+      <li class="log-out" ng-controller="LogoutCtrl">
+        <button class="btn waves-effect waves-light" type="button" ng-click="submit()">Log Out</button>
+      </li>
+    </ul>
+  </div>
+</nav>

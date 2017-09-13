@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <title>Survey App | Angular JS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app/lib/angular/angular-route.min.js"></script>
+    <script src="app/lib/angular_devise-master/lib/devise-min.js"></script> <!--devise-->
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/accountController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/logoutController.js"></script>
+    <script src="app/controllers/newSurveyController.js"></script>
+    <script src="app/controllers/summarySurveyController.js"></script>
+    <script src="app/controllers/surveysController.js"></script>
+    <script src="app/controllers/usersController.js"></script>
+    <script src="app/controllers/summaryQuestionController.js"></script>
+    <script src="app/controllers/registerController.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="app/lib/materialize/js/materialize.js"></script>
+    <link rel="stylesheet" href="app/lib/materialize/css/materialize.css" />
+    <link rel="stylesheet" href="app/lib/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+    $(document).ready(function () {
+
+      $('select').material_select();
+
+      $('.modal').modal();
+
+
+    });
+    </script>
+  </head>
+  <body ng-app="surveyApp">
+    <div ng-view></div>
+  </body>
+  <!--
+  <footer class="page-footer surveyColor">
+    <div class="footer-copyright surveyColor">
+      <div class="container">
+      © 2017 Copyright Lorenzo Cristofori - Alessio Fanelli - Claudiu Hromei - Andrea Santilli - Luca Squadrone
+      </div>
+    </div>
+  </footer>
+-->
+</html>

@@ -1,0 +1,27 @@
+<div ng-include="'views/menu.html'"></div>
+
+<div ng-controller="summaryQuestion">
+
+  <div id="head_title" class="row surveyColor">
+      <div id="title" class="title col s12">
+        <h3 class="white-text">{{question[0].title}}</h3>
+      </div>
+  </div>
+
+  <div id="summarySurvey" class="container">
+    <div class="row">
+      <div class="col s8 m8">
+       <div class="card-panel green white-text">
+         <h4>{{question[0].data.domanda}}</h4>
+       </div>
+     </div>
+    </div>
+    <div class="row">
+      <div class="col s12 m12"  ng-repeat="answer in answers">
+       <div class="card-panel green white-text">
+         <h5>{{answer.data}}</h5>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>

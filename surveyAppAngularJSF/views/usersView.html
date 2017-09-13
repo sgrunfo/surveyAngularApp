@@ -1,0 +1,80 @@
+<div ng-include="'views/menu.html'"></div>
+
+<div id="head_title" class="row surveyColor">
+    <div id="title" class="title col s12">
+      <h3 class="white-text">Users</h3>
+    </div>
+</div>
+
+<div class="container" ng-controller="mostraUsers">
+  <div class="row">
+    <form autocomplete="off" action="/" id="addUser" >
+      <div class="input-field col s4">
+        <input id="email" type="email" class="validate" ng-model="email" autocomplete="off">
+        <label for="email">Email</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="password" type="password" class="validate" ng-model="password" autocomplete="off">
+        <label for="password">Password</label>
+      </div>
+      <div class="input-field col s3">
+        <!--
+          <select ng-model="selectedRole">
+            <option value="">Role</option>
+            <option value="admin">Admin</option>
+            <option value="admin_survey">Admin Survey</option>
+            <option value="user">User</option>
+          </select>
+        -->
+
+        <input id="role" type="text" class="validate" ng-model="role" autocomplete="off">
+        <label for="role">Role</label>
+
+      </div>
+      <div class="input-field col s1">
+      <button class="btn-floating waves-effect waves-light" type="button" name="action" ng-click="creaUser()"><i class="material-icons">add</i></button>
+      </div>
+    </form>
+  </div>
+  <div id="users" class="row">
+    <div id="searchBox">
+      <div class="input-field col s4">
+        <input id="all_search" type="text" ng-model="globalSearch.$">
+        <label for="all_search">Search All</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="email_search" type="text" ng-model="globalSearch.email">
+        <label for="email_search">Search Email</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="role_search" type="text" ng-model="globalSearch.role">
+        <label for="role_search">Search Role</label>
+      </div>
+    </div>
+  </div>
+  <table class="striped">
+    <thead>
+      <tr>
+          <th>id</th>
+          <th>email</th>
+          <th>role</th>
+          <th>delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="user in mostraUsers | filter:globalSearch">
+        <td>{{user.id}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.role}}</td>
+        <td>
+          <button class="btn-floating waves-effect waves-light red" type="button" name="action" ng-click="deleteUser( user.id )">
+            <i class="material-icons">delete</i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+</div>

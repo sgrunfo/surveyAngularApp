@@ -1,0 +1,89 @@
+<div ng-include="'views/menu.html'"></div>
+
+<div id="head_title" class="row surveyColor">
+    <div id="title" class="title col s12">
+      <h3 class="white-text">Surveys</h3>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div id="sondaggi" ng-controller="mostraSondaggi">
+        <!-- <div ng-controller="mostraSondaggi">
+          <ul class="collection">
+              <li class="collection-item avatar" ng-repeat="sondaggio in mostraSondaggi">
+                <a ng-click="goSondaggio( sondaggio.id )">
+                  <i class="material-icons circle {{sondaggio.status}}">{{sondaggio.status}}</i>
+                  <h5 class="title">{{sondaggio.title}}</h5>
+                  <p></p>
+                </a>
+                <div class="switch secondary-content">
+                  <label>
+                    Off
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    On
+                  </label>
+                </div>
+              </li>
+          </ul>
+        </div> -->
+        <div id="searchBox" class="row">
+          <div class="input-field col s3">
+            <input id="all_search" type="text" ng-model="globalSearch.$">
+            <label for="all_search">Search All</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="title_search" type="text" ng-model="globalSearch.title">
+            <label for="title_search">Search by Title</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="topic_id_search" type="text" ng-model="globalSearch.topic_id">
+            <label for="topic_id_search">Search by Topic</label>
+          </div>
+          <div class="input-field col s3">
+            <input id="status_search" type="text" ng-model="globalSearch.status">
+            <label for="status_search">Search by Status</label>
+          </div>
+        </div>
+        <table class="striped">
+          <thead>
+            <tr>
+                <th>id</th>
+                <th>user_id</th>
+                <th>title</th>
+                <th>topic_id</th>
+                <th>status</th>
+                <th>max users</th>
+                <th>Summary</th>
+                <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ng-repeat="survey in mostraSondaggi | filter:globalSearch">
+              <td>{{survey.id}}</td>
+              <td>{{survey.user_id}}</td>
+              <td>{{survey.title}}</td>
+              <td>{{survey.topic_id}}</td>
+              <td>{{survey.status}}</td>
+              <td>{{survey.max_users}}</td>
+              <td>
+                <button class="btn-floating waves-effect waves-light green" type="button" name="action" ng-click="goSondaggio( survey.id )">
+                  <i class="material-icons">launch</i>
+                </button>
+              </td>
+              <td>
+                <button class="btn-floating waves-effect waves-light red" type="button" name="action" ng-click="deleteSurvey( survey.id )">
+                  <i class="material-icons">delete</i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

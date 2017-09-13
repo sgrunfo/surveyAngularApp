@@ -1,0 +1,72 @@
+<div ng-include="'views/menu.html'"></div>
+
+<div id="head_title" class="row surveyColor">
+    <div id="title" class="title col s12">
+      <h3 class="white-text">New Survey</h3>
+    </div>
+</div>
+
+<div class="container">
+  <div class="row" ng-controller="newSurveyCtrl">
+    <div class="col s3">
+      <div class="row">
+       <button class="btn btn-medium waves-effect waves-light addQuestion" ng-click="addQuestion()">
+         Domanda Aperta
+       </button>
+      </div>
+      <div class="row">
+       <button class="btn btn-medium waves-effect waves-light addQuestionOption" ng-click="addQuestionOption()">
+         Domanda Opzioni
+       </button>
+      </div>
+    </div>
+    <div class="col s9">
+      <div class="row">
+        <form action="/" id="newSurvey">
+          <div id="surveyDetails" class="col s12">
+
+            <div class="input-field col s12">
+              <input id="surveyTitle" type="text" class="validate" ng-model="newSurvey.title">
+              <label for="surveyTitle">Survey Title</label>
+            </div>
+            <div class="input-field col s5">
+
+              <!-- <select ng-model="topic">
+                <option value="" disabled selected>Topic</option>
+                <option value="topic 1">topic 1</option>
+                <option value="topic 2">Topic 2</option>
+                <option value="topic 3">topic 3</option>
+              </select> -->
+
+              <input id="topic" type="text" class="validate" ng-model="newSurvey.topic">
+              <label for="topic">Topic</label>
+
+            </div>
+            <div class="input-field col s2">
+
+              <!-- <select ng-model="status">
+                <option value="" disabled selected>Status</option>
+                <option value="On">On</option>
+                <option value="Off">Off</option>
+              </select> -->
+
+              <input id="status" type="text" class="validate" ng-model="newSurvey.status">
+              <label for="status">Status</label>
+
+            </div>
+            <div class="input-field col s5">
+              <input id="surveyMax" type="number" class="validate" ng-model="newSurvey.max_users">
+              <label for="surveyMax">Max Users</label>
+            </div>
+
+          </div>
+          <div id="questionSurvey">
+          </div>
+          <button class="btn-floating right waves-effect waves-light green" type="button" name="action" ng-click="saveSurvey()">
+            <i class="material-icons">done</i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
